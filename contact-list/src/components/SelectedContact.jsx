@@ -20,24 +20,20 @@ export default function SelectedContact({
     }
     fetchContact();
   }, []);
-  //   return (
-  //     <div>
-  //         <h1>Contact Details</h1>
-  //         {contact && (
-  //             <div>
-  //         <p>Name: {contact.name}</p>
-  //         <p>Username: {contact.username}</p>
-  //         <p>Email: {contact.email}</p>
-  //         <p>Phone: {contact.phone}</p>
-  //         <div/>
-  //         )}
-
-  //   )}
-  //   <button
-  //   onClick={() => {
-  //     setSelectedContactId(null)
-  //   }}
-  //   >GoBack</button>
-  // </div>
-  //   );
+  return (
+    <>
+      <div>
+        <h1>Contact Information</h1>
+      </div>
+      {contact && (
+        <div>
+          <h2>Name: {contact.name} </h2>
+          <h2>Username: {contact.username} </h2>
+          <h2>Phone Number: {contact.phone} </h2>
+          <h2>Email: {contact.email} </h2>
+          <h2>Company: {contact.company.name} </h2>
+        </div>
+      )}
+    </>
+  );
 }
